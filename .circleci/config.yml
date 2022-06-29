@@ -4,12 +4,12 @@ orbs:
   slack: circleci/slack@4.10.1
 
 commands:
-  notify_on_failure:
-    steps:
+    notify_on_failure:
+      steps:
         - slack/notify:
-            event: fail
-            channel: cicd-pipeline
-            template: basic_fail_1
+              event: fail
+              channel: cicd-pipeline
+              template: basic_fail_1
 #   destroy-environment:
 #     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
 #     parameters:
