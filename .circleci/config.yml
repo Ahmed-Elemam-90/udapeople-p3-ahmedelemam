@@ -215,7 +215,6 @@ jobs:
           fingerprints: ["0f:1c:b3:90:ee:83:06:bf:36:ad:e5:03:8f:d7:04:8c"]
       - attach_workspace:
           at: ~/
-      - install_awscli
       - install_ansible
       - run:
           name: Configure server
