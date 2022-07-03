@@ -351,11 +351,11 @@ jobs:
 
             export API_URL="http://${BACKEND_IP}:3030"
             echo "${API_URL}"
-            if curl -s $API_URL/api/status | grep "ok"
+            if curl "$API_URL/api/status" | grep "ok"
             then
-              return 0
+              exit 0
             else
-              return 1
+              exit 1
             fi
       - run:
           name: Frontend smoke test.
@@ -364,7 +364,7 @@ jobs:
             echo ${FRONTEND_WEBSITE} 
             if curl -s ${FRONTEND_WEBSITE} | grep "Welcome"
             then
-              return 0
+              return 1
             else
               return 1
             fi
