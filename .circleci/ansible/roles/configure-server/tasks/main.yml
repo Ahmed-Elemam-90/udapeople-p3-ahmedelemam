@@ -1,4 +1,14 @@
 ---
+- name: "update packages."
+  become: true
+  apt:
+      update_cache: yes
+
+- name: "upgrade packages"
+  become: true
+  apt:
+      upgrade: yes
+
 - name: "Install NodeJS 13"
   become: true
   shell: |
@@ -7,7 +17,10 @@
     sudo npm install --global n
     sudo n 13.8.0
 
-- name: "Install PM2 Globally"
+- name: "install pm2"
+  become: true
   npm:
-    name: pm2
-    global: yes
+      name: pm2
+      global: yes
+      production: yes
+      state: present
