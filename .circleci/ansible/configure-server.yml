@@ -23,8 +23,6 @@
         name: python3
         state: latest
 
-    
-
     - setup:
   environment:
       TYPEORM_CONNECTION: "{{ lookup('env', 'TYPEORM_CONNECTION')}}"
