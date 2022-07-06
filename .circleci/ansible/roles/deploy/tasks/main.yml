@@ -12,14 +12,16 @@
 - name: "Installing Node Deps"
   shell: |
     cd /home/ubuntu/backend-app
-    npm i
+    npm install -g npm@latest
+    npm install pm2@latest -g
+    
 
 - name: "Start  App with PM2"
   shell:
     cd /home/ubuntu/backend-app/dist
-    npm install pm2@latest -g
-    pm2 stop default
     pm2 start -f main.js
+  args:
+      chdir: /home/ubuntu/backend/dist
   register: execute_node
 
 - name: print message
