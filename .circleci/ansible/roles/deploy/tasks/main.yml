@@ -13,8 +13,7 @@
   shell: |
     cd /home/ubuntu/backend-app
     sudo npm install 
-    sudo npm install pm2 -g
-    sudo npm start
+
 
 - name: "Start  App with PM2"
   shell:
