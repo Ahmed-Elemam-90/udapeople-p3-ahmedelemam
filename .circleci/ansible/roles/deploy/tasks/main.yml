@@ -11,10 +11,9 @@
 
   - name: "Installing Node Deps"
     become: true
-    apt:
-      name: npm
-      state: latest
-      update_cache: yes
+    shell: |
+      cd /home/ubuntu/backend-app
+      npm install 
 
   - name: "Start App with PM2"
     become: true
@@ -23,6 +22,7 @@
       pm2 stop default
       pm2 start -f main.js
       pm2 log
+
     register: execute_node
 
   - name: print message
