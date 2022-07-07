@@ -2,12 +2,13 @@
 https://github.com/Ahmed-Elemam-90/udapeople-p3-ahmedelemam
 
 [URL02]
-
+http://udapeople-4abaa68.s3-website-us-east-1.amazonaws.com/
 
 [URL03]
-
+http://d3pvy1ax1au9s9.cloudfront.net
 
 [URL04]
-
+http://44.207.62.184:3030/api/status
 
 [URL05]
+http://ec2-44-201-157-83.compute-1.amazonaws.com:9090/targets
